@@ -1,3 +1,40 @@
 # Ohjelmisto 2, Tehtäviä osa 1
 
+1. Tehtäviä
+  1.
+  a) ja b)
 Muutetaan radiaanit asteiksi pythonilla:
+
+import numpy as np
+import math
+
+a = 2.493
+b = 0.911
+
+print(f"a) on asteina {np.degrees(a)}")
+print(f"b) on asteina {np.degrees(b)}")
+
+a) on asteina 142.83837832611422
+b) on asteina 52.196455136417995
+
+Process finished with exit code 0
+
+
+  2.
+  a) ja b)
+import numpy as np
+import math
+
+a = 137.7
+b = 62.3
+
+print(f"a) on radiaaneina {np.radians(a)}")
+print(f"b) on radiaaneina {np.radians(b)}")
+
+a) on radiaaneina 2.4033183799961915
+b) on radiaaneina 1.0873401239924672
+
+Process finished with exit code 0
+
+
+  3.
