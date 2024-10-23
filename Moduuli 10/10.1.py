@@ -2,14 +2,20 @@ class Hissi():
     def __init__(self, alin = 1, ylin = 5):
         self.alin = alin
         self.ylin = ylin
+        self.nykyinen_kerros = alin
 
     def siirry_kerrokseen(self, kerros):
         if kerros != 1:
             self.kerros_alas()
-        if h >= kerros:
-            self.kerros_ylos()
-        elif h <= kerros:
-            self.kerros_alas
+        if self.kerros > self.nykyinen_kerros:
+            while self.nykyinen_kerros < kerros:
+                self.kerros_ylos()
+                print(self.nykyinen_kerros)
+
+        elif self.kerros < self.nykyinen_kerros:
+            while self.nykyinen_kerros > kerros:
+                self.kerros_alas()
+                print(nykyinen_kerros)
 
     def kerros_ylos(self, ylos):
         for i in range(ylos):
