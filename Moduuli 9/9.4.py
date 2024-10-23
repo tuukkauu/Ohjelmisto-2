@@ -48,7 +48,7 @@ while kilpailu_jatkuu:
             break
 
 # Tulostetaan kaikkien autojen tiedot
-print(f"{'Rekisteritunnus':<10}, {'Huippunopeus':<15}, {'Nopeus':<10}, {'Kuljettu matka'}")
+print(f"{'Rekisteritunnus':<10}  {'Huippunopeus':<15}  {'Nopeus':<10}  {'Kuljettu matka'}")
 for auto in autot:
     print(f"{auto.rekisteritunnus:<10}           {auto.huippunopeus:<15}"
           f"{auto.tamanhetkinen_nopeus:<10}    {auto.kuljettu_matka:.2f}")
