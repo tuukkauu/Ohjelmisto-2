@@ -29,15 +29,13 @@ print(f"Auton rekisteritunnus on {auto.rekisteritunnus}, huippunopeus on {auto.h
       f"tämänhetkinen nopeus on {auto.tamanhetkinen_nopeus} km/h ja kuljettu matka on"
       f"{auto.kuljettu_matka} km.")
 
-# +30 km/h
+# nopeuden lisäykset:
 auto.kiihdyta(30)
 print(f"Nopeus kiihdytyksen jälkeen (+30 km/h): {auto.tamanhetkinen_nopeus} km/h.")
 
-# +70 km/h
 auto.kiihdyta(70)
 print(f"Nopeus kiihdytyksen jälkeen (+70 km/h): {auto.tamanhetkinen_nopeus} km/h.")
 
-# +50 km/h
 auto.kiihdyta(50)
 print(f"Nopeus nyt maksiminopeus (+50 km/h): {auto.tamanhetkinen_nopeus} km/h.")
 
