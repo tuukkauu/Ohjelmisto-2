@@ -21,6 +21,8 @@ class Auto():
 
     def kulje(self, tuntimaara):
         self.kuljettu_matka = self.kuljettu_matka + self.tamanhetkinen_nopeus * tuntimaara
+        if self.kuljettu_matka >= 10000:
+            self.kuljettu_matka = 10000
 
 for a in range(10):
     huippunopeus = random.randint(100, 200)
@@ -41,7 +43,7 @@ while kilpailu_jatkuu:
         auto.kulje(1)
 
         # 10k km
-        if auto.kuljettu_matka == 10000:
+        if auto.kuljettu_matka >= 10000:
             kilpailu_jatkuu = False
             break
 
