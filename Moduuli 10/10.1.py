@@ -36,4 +36,5 @@ class Hissi():
 
 h = Hissi()
 
+
 h.siirry_kerrokseen(5)
