@@ -48,7 +48,6 @@ class Talo():
         self.ylin = ylin
         self.lukumaara = lukumaara
         self.hissit = [Hissi(alin, ylin) for _ in range(lukumaara)]
-       # self.hissit = []
 
     def hissien_maara(self):
         for h in range(self.lukumaara):
@@ -70,4 +69,6 @@ class Talo():
 # Pääohjelma
 
 talo = Talo(1, 10, 3)
+
+talo.aja_hissia(1, 2)
 talo.aja_hissia(2, 5)
