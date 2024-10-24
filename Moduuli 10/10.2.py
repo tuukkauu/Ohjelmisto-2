@@ -42,23 +42,35 @@ class Hissi():
 
 # Talo class
 
-hissit = []
 class Talo():
     def __init__(self, alin = 1, ylin = 10, lukumaara = 3):
         self.alin = alin
         self.ylin = ylin
         self.lukumaara = lukumaara
         self.hissit = [Hissi(alin, ylin) for _ in range(lukumaara)]
+       # self.hissit = []
 
-"""
     def hissien_maara(self):
         for h in range(self.lukumaara):
             hissi = Hissi(self.ylin, self.alin)
-            hissit.append(hissi)
+            self.hissit.append(hissi)
+            self.hissi = self.hissi + 1
             print(h)
-"""
-print(hissit)
+            print(self.hissit)
 
+
+    def aja_hissia(self, hissin_numero, kohdekerros):
+        if 0 < hissin_numero < self.lukumaara:
+            print(f"Ajetaan {hissin_numero}. hissiä")
+            self.hissit[hissin_numero].siirry_kerrokseen(kohdekerros)
+        else:
+            print("Hissejä on vain kolme kappaletta.")
+
+
+# Pääohjelma
+
+talo = Talo(1, 10, 3)
+talo.aja_hissia(2, 5)
 
 """
 # Pääohjelmassa, kutsutaan hissi
