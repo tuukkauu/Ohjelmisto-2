@@ -5,15 +5,24 @@ class Hissi():
         self.nykyinen_kerros = alin
 
     def siirry_kerrokseen(self, kerros):
-        if self.kerros > self.nykyinen_kerros:
-            while self.nykyinen_kerros < kerros:
-                self.kerros_ylos()
-                print(self.nykyinen_kerros)
+        if kerros < self.alin:
+            print("Alin mahdollinen kerros on ensimmäinen kerros.")
+            kerros = self.alin
+        elif kerros > self.ylin:
+            print("Ylin mahdollinen kerros on viides kerros.")
+            kerros = self.ylin
 
-        elif self.kerros < self.nykyinen_kerros:
-            while self.nykyinen_kerros > kerros:
-                self.kerros_alas()
-                print(self.nykyinen_kerros)
+        if self.nykyinen_kerros == kerros:
+            print(f"Hissi on nyt kerroksessa: {self.nykyinen_kerros}")
+            return
+
+
+        while self.nykyinen_kerros < kerros:
+            self.kerros_ylos()
+        while self.nykyinen_kerros > kerros:
+            self.kerros_alas()
+        else:
+            print(f"Olet nyt kerroksessa {self.nykyinen_kerros}")
 
     def kerros_ylos(self):
         if self.nykyinen_kerros < self.ylin:
@@ -29,14 +38,7 @@ class Hissi():
         else:
             print("Hissi on jo alimmassa kerroksessa.")
 
-
-
 # Pääohjelmassa, kutsutaan hissi
-
-h = Hissi()
-
+h = Hissi(0, 10)
+h.siirry_kerrokseen(-1)
 h.siirry_kerrokseen(5)
-h.siirry_kerrokseen(1)
-
-#if kerros != 1:
-    #   self.kerros_alas()
