@@ -40,17 +40,24 @@ class Hissi():
             print("Hissi on jo alimmassa kerroksessa.")
 
 
+# Talo class
+
+hissit = []
 class Talo():
     def __init__(self, alin = 1, ylin = 10, lukumaara = 3):
         self.alin = alin
         self.ylin = ylin
         self.lukumaara = lukumaara
+        self.hissit = [Hissi(alin, ylin) for _ in range(lukumaara)]
 
+"""
     def hissien_maara(self):
-        hissit = []
-        for i in range(self.lukumaara):
-            hissi = hissit.append(Hissi(self.alin, self.ylin))
-            print(hissit)
+        for h in range(self.lukumaara):
+            hissi = Hissi(self.ylin, self.alin)
+            hissit.append(hissi)
+            print(h)
+"""
+print(hissit)
 
 
 """
