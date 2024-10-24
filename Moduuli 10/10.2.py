@@ -71,10 +71,3 @@ class Talo():
 
 talo = Talo(1, 10, 3)
 talo.aja_hissia(2, 5)
-
-"""
-# Pääohjelmassa, kutsutaan hissi
-h = Hissi(1, 10)
-h.siirry_kerrokseen(-1)
-h.siirry_kerrokseen(5)
-"""
