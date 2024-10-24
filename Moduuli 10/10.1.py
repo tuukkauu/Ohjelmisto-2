@@ -39,6 +39,6 @@ class Hissi():
             print("Hissi on jo alimmassa kerroksessa.")
 
 # Pääohjelmassa, kutsutaan hissi
-h = Hissi(0, 10)
+h = Hissi(1, 10)
 h.siirry_kerrokseen(-1)
 h.siirry_kerrokseen(5)
