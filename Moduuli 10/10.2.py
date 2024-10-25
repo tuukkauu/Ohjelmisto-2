@@ -17,7 +17,6 @@ class Hissi():
             print(f"Hissi on nyt kerroksessa: {self.nykyinen_kerros}")
             return
 
-
         while self.nykyinen_kerros < kerros:
             self.kerros_ylos()
         while self.nykyinen_kerros > kerros:
@@ -54,9 +53,6 @@ class Talo():
             hissi = Hissi(self.ylin, self.alin)
             self.hissit.append(hissi)
             self.hissi = self.hissi + 1
-            print(h)
-            print(self.hissit)
-
 
     def aja_hissia(self, hissin_numero, kohdekerros):
         if 0 < hissin_numero < self.lukumaara:
