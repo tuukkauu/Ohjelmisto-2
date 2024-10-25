@@ -42,7 +42,7 @@ class Hissi():
 # Talo class
 
 class Talo():
-    def __init__(self, alin = 1, ylin = 10, lukumaara = 3):
+    def __init__(self, alin = 1, ylin = 10, lukumaara = 4):
         self.alin = alin
         self.ylin = ylin
         self.lukumaara = lukumaara
@@ -53,8 +53,6 @@ class Talo():
             hissi = Hissi(self.ylin, self.alin)
             self.hissit.append(hissi)
             self.hissi = self.hissi + 1
-            print(h)
-            print(self.hissit)
 
     def aja_hissia(self, hissin_numero, kohdekerros):
         if 0 < hissin_numero < self.lukumaara:
@@ -64,19 +62,14 @@ class Talo():
             print("Hissejä on vain kolme kappaletta.")
 
     def palohalytys(self):
-        for p in range(self.hissit):
-            if self.nykyinen_kerros > self.alin:
-                self.siirry_kerrokseen = self.alin
+        for hissi in self.hissit:
+            hissi.siirry_kerrokseen(self.alin)
 
-        """
-        if self.palohalytys:
-            self.palaa = self.alin
-            self.hissit[1, 2, 3].siirry_kerrokseen(self.alin)
-        """
 
 # Pääohjelma
 
 talo = Talo(1, 10, 3)
 
-talo.aja_hissia(1, 5)
+#talo.aja_hissia(2, 5)
+#talo.aja_hissia(1, 6)
 talo.palohalytys()
