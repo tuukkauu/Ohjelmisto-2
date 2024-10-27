@@ -6,4 +6,8 @@ class Julkaisu():
         self.sukunimi = sukunimi
 
     def tulosta_tiedot(self):
-        print(f"{self.julkaisun_nimi}, ")
+        print(f"{self.julkaisun_nimi}, {self.etunimi} {self.sukunimi}")
+
+
+# Pääohjelma
+
