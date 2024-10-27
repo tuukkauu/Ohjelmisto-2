@@ -1,13 +1,27 @@
 class Julkaisu():
 
-    def __init__(self, julkaisun_nimi, etunimi, sukunimi):
-        self.julkaisun_nimi = julkaisun_nimi
-        self.etunimi = etunimi
-        self.sukunimi = sukunimi
+    def __init__(self, teos):
+        self.teos = teos
 
     def tulosta_tiedot(self):
-        print(f"{self.julkaisun_nimi}, {self.etunimi} {self.sukunimi}")
+        print(f"{self.teos}")
+
+class Julkaisija(Julkaisu):
+
+    def __init__(self, teos, ammattinimike, etunimi, sukunimi):
+        self.ammattinimike = ammattinimike
+        self.etunimi = etunimi
+        self.sukunimi = sukunimi
+        super().__init__(teos)
+
+
+    def tulosta_tiedot(self):
+        super().tulosta.tiedot()
+        print(f": {self.ammattinimike}, {self.etunimi} {self.sukunimi}")
+
 
 
 # Pääohjelma
+
+Julkaisija.tulosta_tiedot("Päätoimittaja", "Aki", "Hyyppä")
 
