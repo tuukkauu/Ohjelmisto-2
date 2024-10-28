@@ -13,15 +13,21 @@ class Kirjailija(Julkaisu):
         self.etunimi = etunimi
         self.sukunimi = sukunimi
         super().__init__(teos)
+
+    def tulosta_tiedot(self):
+        super().tulosta_tiedot()
         print(f"{self.kirjailija} {self.etunimi} {self.sukunimi}")
 
-class Päätoimittaja(Julkaisu):
-    def __init__(self, teos, päätoimittaja, etunimi, sukunimi):
-        self.päätoimittaja = päätoimittaja
+class Paatoimittaja(Julkaisu):
+    def __init__(self, teos, paatoimittaja, etunimi, sukunimi):
+        self.paatoimittaja = paatoimittaja
         self.etunimi = etunimi
         self.sukunimi = sukunimi
         super().__init__(teos)
-        print(f"{self.päätoimittaja} {self.etunimi} {self.sukunimi}")
+
+    def tulosta_tiedot(self):
+        super().tulosta_tiedot()
+        print(f"{self.paatoimittaja} {self.etunimi} {self.sukunimi}")
 
 
 """
@@ -42,5 +48,4 @@ class Julkaisija(Julkaisu):
 
 # Pääohjelma
 
-Kirjailija.tulosta_tiedot("Aku Ankka")
-
+Julkaisu.tulosta_tiedot()
