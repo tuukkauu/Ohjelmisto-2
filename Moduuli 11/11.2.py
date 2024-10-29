@@ -1,47 +1,44 @@
 class Auto():
-    def __init__(self, rekisteritunnus, huippunopeus):
-        self.rekisteritunnus = rekisteritunnus
-        self.huippunopeus = huippunopeus
-        self.tamanhetkinen_nopeus = 0
-        self.kuljettu_matka = 0
-
-    def kulje(self, tuntimaara):
-        self.kuljettu_matka = self.kuljettu_matka + self.tamanhetkinen_nopeus * tuntimaara
+    def __init__(self, nopeus, aika):
+        self.nopeus = nopeus
+        self.aika = aika
 
     def tulosta_tiedot(self):
-        print(self.rekisteritunnus, self.huippunopeus, self.tamanhetkinen_nopeus, self.kuljettu_matka)
+        matka = self.nopeus * self.aika
+        print(matka)
 
 
 class Sahkoauto(Auto):
-    def __init__(self, rekisteritunnus, huippunopeus, kapasiteetti):
-        self.kapasiteetti = kapasiteetti
-        super().__init__(rekisteritunnus, huippunopeus)
+    def __init__(self, nopeus, aika, rekisteritunnus, huippunopeus = 180, akkukapasiteetti = 52.5):
+        self.rekisteritunnus = rekisteritunnus
+        self.huippunopeus = huippunopeus
+        self.akkukapasiteetti = akkukapasiteetti
+        super().__init__(nopeus, aika)
 
     def tulosta_tiedot(self):
-        print(f"{self.kapasiteetti}")
         super().tulosta_tiedot()
+        print(f"{self.akkukapasiteetti}")
 
 
 class Polttomoottoriauto(Auto):
-    def __init__(self, rekisteritunnus, huippunopeus, kulutus):
-        self.kulutus = kulutus
-        super().__init__(rekisteritunnus, huippunopeus)
+    def __init__(self, nopeus, aika, rekisteritunnus, huippunopeus = 165, tankki = 32.3):
+        self.rekisteritunnus = rekisteritunnus
+        self.huippunopeus = huippunopeus
+        self.tankki = tankki
+        super().__init__(nopeus, aika)
 
     def tulosta_tiedot(self):
-        print(f"{self.kulutus}")
         super().tulosta_tiedot()
+        print(f"{self.tankki}", end = " ")
 
 
 # Pääohjelma
 
-lista = []
+autot = []
 
-lista.append(Sahkoauto("ABC-15", 180, 52.5))
-lista.append(Polttomoottoriauto("ACD-123", 165, 32.3))
+autot.append(Sahkoauto(100, 3, "ABC-15"))
+autot.append(Polttomoottoriauto(100, 3, "ACD.123"))
 
-
-for i in lista:
-    i.kulje(3)
-    i.tulosta_tiedot()
-
+for a in autot:
+    a.tulosta_tiedot()
 
