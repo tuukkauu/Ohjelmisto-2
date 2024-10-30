@@ -3,8 +3,8 @@ import requests
 
 
 # pyyntö:
-pyyntö = "https://api.chucknorris.io/jokes/random"
+pyynto = "https://api.chucknorris.io/jokes/random"
 
-vastaus = requests.get(pyyntö).json()
+vastaus = requests.get(pyynto).json()
 
 print(vastaus["value"])
