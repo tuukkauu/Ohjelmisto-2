@@ -7,16 +7,11 @@ pyynto = f"https://api.openweathermap.org/data/2.5/weather?q={paikkakunta}&appid
 
 vastaus = requests.get(pyynto).json()
 
-#print(json.dumps(vastaus, indent=2))
-
 celcius = - 273.15
 
 lampotila = vastaus["main"]["temp"] + celcius
 lamp_tuntuu = vastaus["main"]["feels_like"] + celcius
-
 kuvaus = vastaus["weather"][0]["description"]
 
 print(f"Lämpötila on {lampotila:.1f} Celsiusta ja tuntuu kuin {lamp_tuntuu:.1f} Celsiusasteelta. Sään kuvaus:"
       f" {kuvaus}.")
-
-#print((vastaus ["main"]["feels_like"] + celcius))
