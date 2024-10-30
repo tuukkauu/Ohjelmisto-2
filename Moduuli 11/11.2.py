@@ -39,7 +39,7 @@ class Polttomoottoriauto(Auto):
 
 autot = []
 
-autot.append(Sahkoauto(170, 3, "ABC-15", 168, 52.5))
+autot.append(Sahkoauto(170, 3, "ABC-15", 180, 52.5))
 autot.append(Polttomoottoriauto(100, 3, "ACD-123", 165, 32.5))
 
 for a in autot:
