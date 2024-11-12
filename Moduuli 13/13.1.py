@@ -1,6 +1,6 @@
-from flask import Flask, jsonify
+from flask import Flask, jsonify, Response
 import json
-#luku = int(input("Syötä tähän luku tarkistaaksesti, onko se alkuluku: "))
+
 
 app = Flask(__name__)
 @app.route('/alkuluku/<int:luku>')
@@ -23,6 +23,15 @@ def alkuluku(luku):
     }
 
     return jsonify(vastaus)
+
+@app.errorhandler(404)
+def page_not_found(virhekoodi):
+    vastaus = {
+        "status" : "404",
+        "teksti" : "Virheellinen paatepiste"
+    }
+    jsonvast = json.dumps(vastaus)
+    return Response(response=jsonvast, status=404, mimetype="application/json")
 
 
 if __name__ == '__main__':
